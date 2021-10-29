@@ -1,0 +1,30 @@
+.container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.moodDisplay {
+  text-align: center;
+}
+
+#happy {
+  background-color: rgb(207, 207, 14);
+}
+
+#sad {
+  background-color: rgb(67, 67, 224);
+  color: aliceblue;
+}
+
+#angry {
+  background-color: rgb(255, 52, 52);
+}
+
+#relaxed {
+  background-color: rgb(50, 175, 50);
+}
