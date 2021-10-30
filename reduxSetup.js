@@ -10,6 +10,8 @@ const moodReducer = (state = INIT, action) => {
       return {...state, mood: "(ꐦ ಠ皿ಠ )"}
     case "RELAXED":
       return {...state, mood: "(-ω-)ゝ"}
+    default:
+      return state
   }
 }
 

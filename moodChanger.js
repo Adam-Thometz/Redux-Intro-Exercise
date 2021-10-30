@@ -15,30 +15,32 @@ const moods = [
 happyButton.addEventListener('click', function(e) {
   store.dispatch({type: moods[0][0]})
   document.body.style.backgroundColor = moods[0][1]
-  moodDisplay.innerText = store.getState().mood
 })
 
 sadButton.addEventListener('click', function(e) {
   store.dispatch({type: moods[1][0]})
   document.body.style.backgroundColor = moods[1][1]
-  moodDisplay.innerText = store.getState().mood
 })
 
 angryButton.addEventListener('click', function(e) {
   store.dispatch({type: moods[2][0]})
   document.body.style.backgroundColor = moods[2][1]
-  moodDisplay.innerText = store.getState().mood
 })
 
 relaxedButton.addEventListener('click', function(e) {
   store.dispatch({type: moods[3][0]})
   document.body.style.backgroundColor = moods[3][1]
-  moodDisplay.innerText = store.getState().mood
 })
 
 randomButton.addEventListener('click', function(e) {
   const idx = Math.floor(Math.random() * moods.length)
   store.dispatch({type: moods[idx][0]})
   document.body.style.backgroundColor = moods[idx][1]
-  moodDisplay.innerText = store.getState().mood
 })
+
+function changeMood() {
+  moodDisplay.innerText = store.getState().mood
+}
+
+changeMood()
+store.subscribe(changeMood)
