@@ -3,13 +3,13 @@ const INIT = {mood: "( ´_ゝ`)"}
 const moodReducer = (state = INIT, action) => {
   switch (action.type) {
     case "HAPPY":
-      return {...state, mood: "( ͡° ͜ʖ ͡°)"}
+      return {...state, mood: action.payload}
     case "SAD":
-      return {...state, mood: "┏༼ ◉ ╭╮ ◉༽┓"}
+      return {...state, mood: action.payload}
     case "ANGRY":
-      return {...state, mood: "(ꐦ ಠ皿ಠ )"}
+      return {...state, mood: action.payload}
     case "RELAXED":
-      return {...state, mood: "(-ω-)ゝ"}
+      return {...state, mood: action.payload}
     default:
       return state
   }
